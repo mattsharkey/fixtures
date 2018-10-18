@@ -1,0 +1,27 @@
+{
+  "name": "creativeservices/twig-fixtures",
+  "type": "library",
+  "description": "Use fixture content in Twig templates",
+  "license": "NCSA",
+  "authors": [
+    {
+      "name": "Matt Sharkey",
+      "email": "msharkey@illinois.edu",
+      "homepage": "http://creativeservices.illinois.edu/"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "twig/twig": "~1.20|~2.0",
+    "eloquent/pathogen": "^0.6.1",
+    "symfony/yaml": "^4.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~7.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "CreativeServices\\Fixtures\\": "src"
+    }
+  }
+}
