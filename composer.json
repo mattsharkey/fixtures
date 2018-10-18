@@ -1,5 +1,5 @@
 {
-  "name": "creativeservices/twig-fixtures",
+  "name": "creativeservices/fixtures",
   "type": "library",
   "description": "Use fixture content in Twig templates",
   "license": "NCSA",
