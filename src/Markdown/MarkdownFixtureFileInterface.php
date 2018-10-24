@@ -1,6 +1,6 @@
 <?php
 
-namespace CreativeServices\Fixtures\Json;
+namespace CreativeServices\Fixtures\Markdown;
 
 use CreativeServices\Fixtures\File\FixtureFileInterface;
 
