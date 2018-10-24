@@ -3,6 +3,7 @@
 namespace CreativeServices\Fixtures\File;
 
 use CreativeServices\Fixtures\Json\JsonFixtureFile;
+use CreativeServices\Fixtures\Json\MarkdownFixtureFile;
 use CreativeServices\Fixtures\Php\PhpFixtureFile;
 use CreativeServices\Fixtures\Yaml\YamlFixtureFile;
 use Eloquent\Pathogen\PathInterface;
@@ -16,6 +17,8 @@ abstract class FixtureFile implements FixtureFileInterface
         switch ($fixturePath->extension()) {
             case 'json':
                 return new JsonFixtureFile($fixturePath);
+            case 'md':
+                return new MarkdownFixtureFile($fixturePath);
             case 'php':
                 return new PhpFixtureFile($fixturePath);
             case 'yml':
