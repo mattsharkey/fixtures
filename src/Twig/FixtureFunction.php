@@ -3,7 +3,6 @@
 namespace CreativeServices\Fixtures\Twig;
 
 use CreativeServices\Fixtures\Collection\FixtureCollectionInterface;
-use CreativeServices\Fixtures\Twig\FixtureFunctionInterface;
 
 class FixtureFunction extends \Twig_SimpleFunction implements FixtureFunctionInterface
 {
