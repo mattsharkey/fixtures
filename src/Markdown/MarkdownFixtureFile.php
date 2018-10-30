@@ -9,6 +9,6 @@ class MarkdownFixtureFile extends FixtureFile implements MarkdownFixtureFileInte
     public function getContext()
     {
         $parser = new \Parsedown();
-        return $parser->text(file_get_contents($this->getPathAsString()));
+        return $parser->text(parent::getContext());
     }
 }

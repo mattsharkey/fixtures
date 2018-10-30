@@ -8,7 +8,7 @@ use CreativeServices\Fixtures\Php\PhpFixtureFile;
 use CreativeServices\Fixtures\Yaml\YamlFixtureFile;
 use Eloquent\Pathogen\PathInterface;
 
-abstract class FixtureFile implements FixtureFileInterface
+class FixtureFile implements FixtureFileInterface
 {
     private $path;
 
@@ -17,15 +17,13 @@ abstract class FixtureFile implements FixtureFileInterface
         switch ($fixturePath->extension()) {
             case 'json':
                 return new JsonFixtureFile($fixturePath);
-            case 'md':
-                return new MarkdownFixtureFile($fixturePath);
             case 'php':
                 return new PhpFixtureFile($fixturePath);
             case 'yml':
             case 'yaml':
                 return new YamlFixtureFile($fixturePath);
             default:
-                throw new \DomainException("Unrecognized fixture type: {$fixturePath->extension()}");
+                throw new static($fixturePath);
         }
     }
 
@@ -35,6 +33,11 @@ abstract class FixtureFile implements FixtureFileInterface
         if (!is_file($path->string())) {
             throw new \InvalidArgumentException("Not a file: {$path->string()}");
         }
+    }
+
+    public function getContext()
+    {
+        return file_get_contents($this->getPathAsString());
     }
 
     protected function getPathAsString()

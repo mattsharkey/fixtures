@@ -9,6 +9,6 @@ class YamlFixtureFile extends FixtureFile implements YamlFixtureFileInterface
 {
     public function getContext()
     {
-        return Yaml::parseFile($this->getPathAsString());
+        return Yaml::parse(parent::getContext());
     }
 }
