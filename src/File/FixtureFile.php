@@ -3,7 +3,6 @@
 namespace CreativeServices\Fixtures\File;
 
 use CreativeServices\Fixtures\Json\JsonFixtureFile;
-use CreativeServices\Fixtures\Markdown\MarkdownFixtureFile;
 use CreativeServices\Fixtures\Php\PhpFixtureFile;
 use CreativeServices\Fixtures\Yaml\YamlFixtureFile;
 use Eloquent\Pathogen\PathInterface;

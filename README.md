@@ -2,11 +2,12 @@
 
 They can be used to populate templates during development. They can also serve as content sources for static site generators and style guides.
 
-## Supported formats
+## Default integrations
+
+These file formats are automatically parsed and returned as complex data:
 
 - JSON
 - YAML
-- Markdown
 
 ## Usage
 
@@ -32,7 +33,6 @@ Add the fixture function to your Twig environment:
 use CreativeServices\Fixtures\Twig\FixtureFunction;
 
 $twig->addFunction(new FixtureFunction($fixtures));
-
 ````
 
 Fixture content will be available inside templates via the `_fixture` function:
