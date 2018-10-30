@@ -22,7 +22,7 @@ class FixtureFile implements FixtureFileInterface
             case 'yaml':
                 return new YamlFixtureFile($fixturePath);
             default:
-                throw new static($fixturePath);
+                return new static($fixturePath);
         }
     }
 
